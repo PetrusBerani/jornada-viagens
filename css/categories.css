@@ -1,3 +1,6 @@
+.categories{
+  margin-bottom: 80px;
+}
 .categories .section-title {
   width: 312px;
   margin: 0 auto;
@@ -16,7 +19,7 @@
    1. REGRA GERAL PARA TODOS OS CARDS
    (Garante que todos tenham exatamente o mesmo tamanho)
    ======================================================= */
-   
+
 .categories-cards a.card {
   width: 312px;
   height: 220px; /* Força todas as caixas a terem a mesma altura */
