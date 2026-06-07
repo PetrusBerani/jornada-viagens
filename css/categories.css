@@ -1,60 +1,47 @@
-.categories .section-title {
-  width: 312px;
-  margin: 0 auto;
-}
+/* =====================================
+   CATEGORIES
+===================================== */
 
-/* 1. Alinhamento dos cards */
 .categories-cards {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 24px;
   margin-top: 64px;
+  justify-items: center;
 }
 
-/* =======================================================
-   1. REGRA GERAL PARA TODOS OS CARDS
-   (Garante que todos tenham exatamente o mesmo tamanho)
-   ======================================================= */
-   
 .categories-cards a.card {
-  width: 312px;
-  height: 220px; /* Força todas as caixas a terem a mesma altura */
+  width: 100%;
+  max-width: 312px;
+  height: 220px;
+
   background-color: var(--background-secondary-color);
-  text-align: center;
   border-radius: 16px;
-  box-sizing: border-box;
   text-decoration: none;
   color: var(--text-primary-color);
-  
-  /* Alinhamento padrão para os cards de 2 linhas (Nacionais e Internacionais) */
-  padding: 32px 24px 24px; 
+
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-start;
-  gap: 16px; 
+
+  gap: 20px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.categories-cards a.card img {
+  width: 180px;
+  height: auto;
 }
 
 .categories-cards a.card h3 {
+  margin: 0;
   font-size: 24px;
   font-weight: var(--title-weight);
-  margin: 0;
   text-align: center;
   line-height: 1.2;
 }
-
-/* =======================================================
-   2. REGRAS MANUAIS ESPECÍFICAS PARA OS CARD DE 1 LINHA
-   (Ajusta o espaço do topo para compensar a linha que falta)
-   ======================================================= */
-
-.categories-cards a.card:not(.single-line) {
-  padding: 32px 24px 20px;
-  justify-content: flex-start;
-  gap: 12px; /* Espaço entre o ícone e o texto de duas linhas */
-}
-
 
 .sr-only {
   position: absolute;
@@ -68,27 +55,31 @@
   border: 0;
 }
 
-/* RESPONSIVIDADE (Telas Maiores) */
+/* =====================================
+   TABLET
+===================================== */
 
 @media screen and (min-width: 768px) {
-  .categories .section-title {
-    width: 100%;
-  }
   .categories-cards {
-    flex-direction: row; /* Coloca os cards lado a lado automaticamente */
-    flex-wrap: wrap;
-    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .categories-cards a.card {
+    max-width: 312px;
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .categories-cards a.card {
-    width: 430px;
-  }
-}
+/* =====================================
+   DESKTOP
+===================================== */
 
 @media screen and (min-width: 1440px) {
+  .categories-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   .categories-cards a.card {
-    width: 280px;
+    max-width: 280px;
+    height: 220px;
   }
 }
