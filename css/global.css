@@ -44,7 +44,7 @@ h1 {
   color: var(--primary-color);
 }
 
-header {
+.main-header {
   background-color: #222222;
 }
 
