@@ -1,7 +1,19 @@
 .hero-img {
   height: 400px;
   width: 100%;
-  background: url(../img/hero-mobile.jpg);
+  background: url(../img/hero-mobile.jpg) no-repeat;
+  background-size: cover;
+}
+
+.botton-hero {
+  width: 100%; 
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.hero-img-footer {
+  height: 400px;
+  background: url(../img/Imagem\ pré\ rodapé\ mobile.png) no-repeat;
   background-size: cover;
 }
 
@@ -21,6 +33,13 @@
     background-size: cover;
   }
 
+  .hero-img-footer {
+    height: 400px;
+    width: 100%;
+    background: url(../img/Imagem\ pré\ tablet.png) no-repeat;
+    background-size: cover;
+  }
+
   .hero h2 {
     padding: 88px 60px;
     font-size: 32px;
@@ -33,14 +52,24 @@
     background-size: cover;
   }
 
+  .hero-img-footer {
+    height: 600px;
+    width: 100%;
+    background: url(../img/Imagem\ pré\ rodapé\ desktop.png) no-repeat;
+    background-size: cover;
+  }
+
   .hero h2 {
     padding: 88px 120px;
     font-size: 32px;
   }
+
+   
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1440px) {
   .hero h2 {
     padding: 88px 160px;
   }
+
 }
