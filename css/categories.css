@@ -61,11 +61,13 @@
 
 @media screen and (min-width: 768px) {
   .categories-cards {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    gap: 24px 16px;
   }
 
   .categories-cards a.card {
-    max-width: 312px;
+    width: 312px;
   }
 }
 
@@ -76,9 +78,12 @@
 @media screen and (min-width: 1280px) {
   .categories-cards {
     grid-template-columns: repeat(4, 1fr);
+    justify-content: stretch;
+    gap: 24px;
   }
 
   .categories-cards a.card {
+    width: auto;
     max-width: 280px;
     height: 220px;
   }
