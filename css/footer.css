@@ -13,6 +13,8 @@
 }
 
 .main-footer .footer-content img {
+  height: 40px;
+  width: 160px;
   margin-bottom: 16px;
 }
 
